@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 
-gem 'rails', '~> 5.0.0'
+gem 'rails', '4.2.7.1'
 gem 'bundler'
 gem 'arel'
 
@@ -9,6 +9,7 @@ gem 'arel'
 gem 'pg'
 
 gem 'activeresource', require: 'active_resource'
+gem 'activesupport'
 
 gem 'haml'
 gem 'rake'
@@ -54,7 +55,6 @@ end
 group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
-  gem 'faker'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
