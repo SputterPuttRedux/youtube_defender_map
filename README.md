@@ -1,2 +1,7 @@
-# youtube_defender_map
-a repo to house a small map project on rails
+#**YouTube Defender Map**#
+
+A small rails project integrating Google Maps API
+
+# README
+
+* ...
