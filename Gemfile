@@ -8,7 +8,6 @@ gem 'arel'
 # postgres
 gem 'pg'
 
-gem 'activeresource', require: 'active_resource'
 gem 'activesupport'
 
 gem 'haml'
@@ -19,7 +18,7 @@ gem 'sanitize'
 
 # To upgrade, need https://github.com/google/google-api-ruby-client/blob/master/MIGRATING.md
 gem 'google-api-client', '~> 0.8.3', require: false
-gem 'simple_form'
+# gem 'simple_form'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 
@@ -35,6 +34,7 @@ gem 'jquery-rails'
 gem 'jbuilder'
 
 gem 'bootstrap-sass', '~> 2.3.2'
+gem 'sprockets-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
