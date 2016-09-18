@@ -9,11 +9,15 @@ class RetrieveYoutubeDataJob < ActiveJob::Base
   private
 
   def persist(data)
-    data[:items].map do |data_item|
-      RawVideoData.create(data_item)
+    data[:items].map do |item|
+      RawVideoData.create_with(
+        etag: item[:etag],
+        title: item[:snippet][:title]
+        description: item[:snippet][:description]
+        published_date: item[:snippet][:publishedAt]
+      ).find_or_create_by(
+        derived_video_id: item[:id][:videoId]
+      )
     end
   end
-
 end
-
-
