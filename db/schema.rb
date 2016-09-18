@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20160918213808) do
   enable_extension "plpgsql"
 
   create_table "raw_video_datas", force: :cascade do |t|
-    t.string   "page_info_id"
+    t.integer  "channel_info_id"
     t.string   "derived_video_id"
     t.string   "etag"
     t.string   "title"
