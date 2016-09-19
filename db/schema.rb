@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160918213808) do
+ActiveRecord::Schema.define(version: 20160919000454) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "page_infos", force: :cascade do |t|
+    t.integer  "total_results"
+    t.string   "etag"
+    t.string   "derived_channel_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "raw_video_datas", force: :cascade do |t|
     t.integer  "channel_info_id"
