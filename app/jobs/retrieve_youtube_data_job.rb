@@ -4,6 +4,7 @@ class RetrieveYoutubeDataJob < ActiveJob::Base
 
   def perform(formatted_url)
     data = HTTParty.get(formatted_url)
+    persist(data)
   end
 
   private
