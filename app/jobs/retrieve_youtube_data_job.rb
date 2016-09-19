@@ -9,6 +9,14 @@ class RetrieveYoutubeDataJob < ActiveJob::Base
   private
 
   def persist(data)
+    channel_info = channel_info(data)
+
+    channel_info.raw_video_datas.create(
+      raw_video_data(data)
+    )
+  end
+
+  def raw_video_data(data)
     data[:items].map do |item|
       RawVideoData.create_with(
         etag: item[:etag],
@@ -19,5 +27,13 @@ class RetrieveYoutubeDataJob < ActiveJob::Base
         derived_video_id: item[:id][:videoId]
       )
     end
+  end
+
+  def channel_info(data)
+    ChannelInfo.create(
+      total_results: data[:pageInfo][:totalResults],
+      etag: results[:etag],
+      derived_channel_id: data[:items].first[:snippet][:channelId]
+    )
   end
 end
