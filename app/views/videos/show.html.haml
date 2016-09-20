@@ -1,0 +1,13 @@
+.col-md-12
+  %h2 Video Upload Info
+  %table.table.table-hover
+    %thead
+      %tr
+        %th Uploaded
+        %th Title
+    %tbody
+    -# binding.pry
+    - @videos.each do |video|
+      %tr
+        %td= video.published_at.strftime('%m %d, %Y')
+        %td= video.title
