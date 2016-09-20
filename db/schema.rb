@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20160919000454) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "page_infos", force: :cascade do |t|
+  create_table "channel_infos", force: :cascade do |t|
     t.integer  "total_results"
     t.string   "etag"
     t.string   "derived_channel_id"
