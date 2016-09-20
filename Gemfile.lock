@@ -114,6 +114,8 @@ GEM
       haml (~> 4.0.0)
       nokogiri (~> 1.6.0)
       ruby_parser (~> 3.5)
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     interception (0.5)
     jbuilder (2.6.0)
@@ -147,6 +149,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     multi_json (1.12.1)
+    multi_xml (0.5.5)
     multipart-post (2.0.0)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
@@ -286,6 +289,7 @@ DEPENDENCIES
   google-api-client (~> 0.8.3)
   haml
   haml-rails
+  httparty
   jbuilder
   jquery-rails
   listen (~> 3.0.5)

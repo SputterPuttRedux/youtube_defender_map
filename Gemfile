@@ -16,6 +16,8 @@ gem 'rake'
 gem 'draper'
 gem 'sanitize'
 
+gem 'httparty'
+
 # To upgrade, need https://github.com/google/google-api-ruby-client/blob/master/MIGRATING.md
 gem 'google-api-client', '~> 0.8.3', require: false
 # gem 'simple_form'
