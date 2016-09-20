@@ -42,7 +42,7 @@ GEM
       addressable (>= 2.3.1)
       extlib (>= 0.9.15)
       multi_json (>= 1.0.0)
-    bootstrap-sass (2.3.2.2)
+    bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
     builder (3.2.2)
     byebug (9.0.5)
@@ -280,7 +280,7 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   arel
-  bootstrap-sass (~> 2.3.2)
+  bootstrap-sass (~> 3.2.0)
   bundler
   capybara
   coffee-rails (~> 4.2)
