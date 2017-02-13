@@ -1,7 +1,5 @@
 class RetrieveYoutubeDataJob < ActiveJob::Base
 
-  CHANNEL_ID = 'UCFNSXVFsx1uJ_2fcsQprxWw'.freeze
-
   def perform(formatted_url)
     data = HTTParty.get(formatted_url)
     persist(data)
