@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 
 
-gem 'rails', '~> 5.0.0'
+gem 'rails', '4.2.7.1'
 gem 'bundler'
 gem 'arel'
 
 # postgres
 gem 'pg'
 
-gem 'activeresource', require: 'active_resource'
+gem 'activesupport'
 
 gem 'haml'
 gem 'rake'
@@ -16,9 +16,11 @@ gem 'rake'
 gem 'draper'
 gem 'sanitize'
 
+gem 'httparty'
+
 # To upgrade, need https://github.com/google/google-api-ruby-client/blob/master/MIGRATING.md
 gem 'google-api-client', '~> 0.8.3', require: false
-gem 'simple_form'
+# gem 'simple_form'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 
@@ -33,7 +35,8 @@ gem 'therubyracer'
 gem 'jquery-rails'
 gem 'jbuilder'
 
-gem 'bootstrap-sass', '~> 2.3.2'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'sprockets-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -54,7 +57,6 @@ end
 group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
-  gem 'faker'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

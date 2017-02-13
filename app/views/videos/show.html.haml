@@ -1,0 +1,15 @@
+.col-md-12
+  %h2 Video Upload Info
+  %table.table.table-hover
+    %thead
+      %tr
+        %th Uploaded
+        %th Title
+        %th DC Number
+    %tbody
+    -# binding.pry
+    - @videos.each do |video|
+      %tr
+        %td= video.published_date.strftime('%m-%d-%Y')
+        %td= truncate(video.title, length: 50)
+        %td

@@ -4,25 +4,23 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
-default: &default
+
+development: &development
   adapter: postgresql
+  encoding: unicode
+  database: youtube_defender_development
   pool: 5
   host: localhost
-  timeout: 5000
-
-development:
-  <<: *default
-  database: youtube_defender_development
-  username: dionne
+  username:
   password:
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
+  <<: *development
   database: youtube_defender_test
 
 production:
-  <<: *default
+  <<: *development
   database: youtube_defender_production
